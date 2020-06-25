@@ -51,7 +51,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="globals.html">Globals</a>
+					<a href="index.html">Globals</a>
 				</li>
 			</ul>
 			<h1>@ice/dike-core-js - v0.2.5</h1>
@@ -61,74 +61,146 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<a href="#dike-core-js" id="dike-core-js" style="color: inherit; text-decoration: none;">
-					<h1>dike-core-js</h1>
-				</a>
-				<p>Api Wrapper javascript</p>
-				<a href="#requisiti" id="requisiti" style="color: inherit; text-decoration: none;">
-					<h2>Requisiti</h2>
-				</a>
-				<ul>
-					<li>Nodejs &gt;= 12 (su windows è necessaria la <strong>versione a 32bit</strong> )</li>
-					<li>yarn (consigliato)</li>
-				</ul>
-				<a href="#utilizzo" id="utilizzo" style="color: inherit; text-decoration: none;">
-					<h2>Utilizzo</h2>
-				</a>
-				<p>Il modulo è ospitato sulla repository Artifactory di Inforcert
-				Per poterlo utilizzare è necessario prima aggiungere la repository:</p>
-				<a href="#aggiunta-e-autenticazione-della-repository-artifactory" id="aggiunta-e-autenticazione-della-repository-artifactory" style="color: inherit; text-decoration: none;">
-					<h3>Aggiunta e autenticazione della repository Artifactory</h3>
-				</a>
-				<ol>
-					<li>Loggarsi (tramite vpn) su <a href="https://integrazione.mgmt.infocert.it/artifactory/webapp/#/home">Artifcatory</a></li>
-					<li>Cercare tra le repo <em>npm-ice-local</em> e cliccarla
-					<img src="./docs/img/ice_1.jpg" alt="alt text"></li>
-					<li>Inserire la propria password (la stessa usata per il login) in alto a destra e autenticarsi
-					<img src="./docs/img/ice_2.jpg" alt="alt text"></li>
-					<li>Copiare le stringhe di autenticazione più in basso e incollarle nel file <em>~/.npmrc</em>  nella propria cartella user (su Windows %USERPROFILE%/.npmrc):
-					<img src="./docs/img/ice_3.jpg" alt="alt text"></li>
-					<li>sostiuire <SCOPE> con <em>ice</em>, il contenuto del file .npmrc dovrà essere simile a questo:<pre><code>@ice:registry=https:<span class="hljs-regexp">//i</span>ntegrazione.mgmt.infocert.it<span class="hljs-regexp">/artifactory/</span>api<span class="hljs-regexp">/npm/</span>npm-ice-local/
-<span class="hljs-regexp">//i</span>ntegrazione.mgmt.infocert.it<span class="hljs-regexp">/artifactory/</span>api<span class="hljs-regexp">/npm/</span>npm-ice-local/:_password=<span class="hljs-comment">###</span>
-<span class="hljs-regexp">//i</span>ntegrazione.mgmt.infocert.it<span class="hljs-regexp">/artifactory/</span>api<span class="hljs-regexp">/npm/</span>npm-ice-local/:username=yye9326
-<span class="hljs-regexp">//i</span>ntegrazione.mgmt.infocert.it<span class="hljs-regexp">/artifactory/</span>api<span class="hljs-regexp">/npm/</span>npm-ice-local/:email=simone.lai.ext@infocert.it
-<span class="hljs-regexp">//i</span>ntegrazione.mgmt.infocert.it<span class="hljs-regexp">/artifactory/</span>api<span class="hljs-regexp">/npm/</span>npm-ice-local/:always-auth=true</code></pre></li>
-					<li>Adesso è possibile scaricare i moduli con scope @ice dalla repository inforcert.</li>
-				</ol>
-				<a href="#installazione-libreria-nel-progetto" id="installazione-libreria-nel-progetto" style="color: inherit; text-decoration: none;">
-					<h3>Installazione libreria nel progetto</h3>
-				</a>
-				<p>Aggiungere il modulo alle dipendenze del progetto come un normale modulo npm:</p>
-				<p><code>yarn add @ice/dike-core-js</code></p>
-				<p>oppure</p>
-				<p><code>npm i @ice/dike-core-js</code></p>
-				<p>La prima volta è consigliabile eliminare la cartella node_modules e i file .lock per fare un&#39;installazione pulita.</p>
-				<a href="#utilizzo-api-wrapper" id="utilizzo-api-wrapper" style="color: inherit; text-decoration: none;">
-					<h3>Utilizzo Api Wrapper</h3>
-				</a>
-				<p>Importare il modulo e instanziare uno dei metodi ad esmpio:</p>
-				<pre><code class="language-javascript"><span class="hljs-comment">//importare la libreria</span>
-<span class="hljs-keyword">import</span> DIKE_CORE_API <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;dike-core-js&quot;</span>
-
-<span class="hljs-comment">//Instanziare la classe</span>
-<span class="hljs-keyword">const</span> DIKE_CORE = <span class="hljs-keyword">new</span> DIKE_CORE_API();
-
-<span class="hljs-comment">//invocare i metodi</span>
-<span class="hljs-keyword">const</span> version = DIKE_CORE.getVersion();
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;version&quot;</span>, version);
-
-<span class="hljs-keyword">const</span> devices = DIKE_CORE.getDevices();
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;devices&quot;</span>, devices)
-</code></pre>
-				<p>La libreria utilizza comandi e moduli nativi, quindi per utilizzare la libreria in Electron è preferibile eseguirla nel Main thread (e non nel render)</p>
-			</div>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum"><a href="enums/errorcodes.html" class="tsd-kind-icon">Error<wbr>Codes</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class"><a href="classes/dgs_core.html" class="tsd-kind-icon">DGS_<wbr>CORE</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface"><a href="interfaces/apierror.html" class="tsd-kind-icon">Api<wbr>Error</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/certificate.html" class="tsd-kind-icon">Certificate</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/configuration.html" class="tsd-kind-icon">Configuration</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/customp11.html" class="tsd-kind-icon">Custom<wbr>P11</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/designverify.html" class="tsd-kind-icon">Design<wbr>Verify</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/devices.html" class="tsd-kind-icon">Devices</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/gui.html" class="tsd-kind-icon">Gui</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/httpproxy.html" class="tsd-kind-icon">Http<wbr>Proxy</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/ldapproxy.html" class="tsd-kind-icon">Ldap<wbr>Proxy</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/links.html" class="tsd-kind-icon">Links</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/pdf.html" class="tsd-kind-icon">Pdf</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/pkcs11.html" class="tsd-kind-icon">Pkcs11</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/rao.html" class="tsd-kind-icon">RAO</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/reader.html" class="tsd-kind-icon">Reader</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/remoteverify.html" class="tsd-kind-icon">Remote<wbr>Verify</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/rss.html" class="tsd-kind-icon">Rss</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/scdata.html" class="tsd-kind-icon">Sc<wbr>Data</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/signaturemodality.html" class="tsd-kind-icon">Signature<wbr>Modality</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/ts.html" class="tsd-kind-icon">Ts</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/updates.html" class="tsd-kind-icon">Updates</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/user.html" class="tsd-kind-icon">User</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/workspacedirectory.html" class="tsd-kind-icon">Workspace<wbr>Directory</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/x509.html" class="tsd-kind-icon">X509</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/initoptions.html" class="tsd-kind-icon">init<wbr>Options</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias"><a href="index.html#apiresponse" class="tsd-kind-icon">Api<wbr>Response</a></li>
+								<li class="tsd-kind-type-alias"><a href="index.html#apisuccess" class="tsd-kind-icon">Api<wbr>Success</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="index.html#path" class="tsd-kind-icon">path</a></li>
+								<li class="tsd-kind-variable"><a href="index.html#pointer" class="tsd-kind-icon">pointer</a></li>
+								<li class="tsd-kind-variable"><a href="index.html#slash" class="tsd-kind-icon">slash</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal"><a href="index.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="apiresponse" class="tsd-anchor"></a>
+					<h3>Api<wbr>Response</h3>
+					<div class="tsd-signature tsd-kind-icon">Api<wbr>Response<span class="tsd-signature-symbol">:</span> <a href="interfaces/apierror.html" class="tsd-signature-type">ApiError</a><span class="tsd-signature-symbol"> | </span><a href="index.html#apisuccess" class="tsd-signature-type">ApiSuccess</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="apisuccess" class="tsd-anchor"></a>
+					<h3>Api<wbr>Success</h3>
+					<div class="tsd-signature tsd-kind-icon">Api<wbr>Success<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="path" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> path</h3>
+					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = require(&#x27;path&#x27;)</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="pointer" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> pointer</h3>
+					<div class="tsd-signature tsd-kind-icon">pointer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = ref.refType(&quot;pointer&quot;)</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="slash" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> slash</h3>
+					<div class="tsd-signature tsd-kind-icon">slash<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = require(&#x27;slash&#x27;)</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal">
+					<a name="defaultoptions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="defaultoptions.debug" class="tsd-anchor"></a>
+						<h3>debug</h3>
+						<div class="tsd-signature tsd-kind-icon">debug<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> = false</span></div>
+						<aside class="tsd-sources">
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="defaultoptions.homepath" class="tsd-anchor"></a>
+						<h3>home<wbr>Path</h3>
+						<div class="tsd-signature tsd-kind-icon">home<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = HomeDir</span></div>
+						<aside class="tsd-sources">
+						</aside>
+					</section>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
+					<li class="globals current ">
+						<a href="index.html"><em>Globals</em></a>
 					</li>
 				</ul>
 			</nav>
@@ -213,22 +285,22 @@
 						<a href="interfaces/initoptions.html" class="tsd-kind-icon">init<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#apiresponse" class="tsd-kind-icon">Api<wbr>Response</a>
+						<a href="index.html#apiresponse" class="tsd-kind-icon">Api<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#apisuccess" class="tsd-kind-icon">Api<wbr>Success</a>
+						<a href="index.html#apisuccess" class="tsd-kind-icon">Api<wbr>Success</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#path" class="tsd-kind-icon">path</a>
+						<a href="index.html#path" class="tsd-kind-icon">path</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#pointer" class="tsd-kind-icon">pointer</a>
+						<a href="index.html#pointer" class="tsd-kind-icon">pointer</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#slash" class="tsd-kind-icon">slash</a>
+						<a href="index.html#slash" class="tsd-kind-icon">slash</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+						<a href="index.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>
